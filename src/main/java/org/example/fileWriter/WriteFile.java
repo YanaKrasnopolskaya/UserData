@@ -11,7 +11,7 @@ public class WriteFile implements FileWriteable{
     public void write(UserDataable input) {
         UserDataParse userDataParse = new UserDataParse();
         String[] data =  userDataParse.parseData(input);
-        String lasttName = data[0];
+        String lastName = data[0];
         String firstName = data[1];
         String patronymic = data[2];
         String birthday = data[3];
