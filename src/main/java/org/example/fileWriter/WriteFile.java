@@ -11,15 +11,15 @@ public class WriteFile implements FileWriteable{
     public void write(UserDataable input) {
         UserDataParse userDataParse = new UserDataParse();
         String[] data =  userDataParse.parseData(input);
-        String firstName = data[0];
-        String lastName = data[1];
+        String lasttName = data[0];
+        String firstName = data[1];
         String patronymic = data[2];
         String birthday = data[3];
         String phoneNumber = data[4];
         String gender = data[5];
-        String fileName = firstName + ".txt";
+        String fileName = lastName + ".txt";
         try (FileWriter writer = new FileWriter(new File(fileName), true)) {
-            writer.write(firstName + " " + lastName + " " + patronymic + " " + birthday + " " + phoneNumber + " " + gender + "\n");
+            writer.write(lastName + " " + firstName + " " + patronymic + " " + birthday + " " + phoneNumber + " " + gender + "\n");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
